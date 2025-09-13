@@ -130,6 +130,66 @@ self-muduo/fast:
 .PHONY : self-muduo/fast
 
 # target to build an object file
+Channel.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Channel.o
+.PHONY : Channel.o
+
+# target to preprocess a source file
+Channel.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Channel.i
+.PHONY : Channel.i
+
+# target to generate assembly for a file
+Channel.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Channel.s
+.PHONY : Channel.s
+
+# target to build an object file
+DefaultPoller.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/DefaultPoller.o
+.PHONY : DefaultPoller.o
+
+# target to preprocess a source file
+DefaultPoller.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/DefaultPoller.i
+.PHONY : DefaultPoller.i
+
+# target to generate assembly for a file
+DefaultPoller.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/DefaultPoller.s
+.PHONY : DefaultPoller.s
+
+# target to build an object file
+EPollPoller.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/EPollPoller.o
+.PHONY : EPollPoller.o
+
+# target to preprocess a source file
+EPollPoller.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/EPollPoller.i
+.PHONY : EPollPoller.i
+
+# target to generate assembly for a file
+EPollPoller.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/EPollPoller.s
+.PHONY : EPollPoller.s
+
+# target to build an object file
+EventLoop.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/EventLoop.o
+.PHONY : EventLoop.o
+
+# target to preprocess a source file
+EventLoop.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/EventLoop.i
+.PHONY : EventLoop.i
+
+# target to generate assembly for a file
+EventLoop.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/EventLoop.s
+.PHONY : EventLoop.s
+
+# target to build an object file
 InetAddress.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/InetAddress.o
 .PHONY : InetAddress.o
@@ -158,6 +218,21 @@ Logger.i:
 Logger.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Logger.s
 .PHONY : Logger.s
+
+# target to build an object file
+Poller.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Poller.o
+.PHONY : Poller.o
+
+# target to preprocess a source file
+Poller.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Poller.i
+.PHONY : Poller.i
+
+# target to generate assembly for a file
+Poller.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/Poller.s
+.PHONY : Poller.s
 
 # target to build an object file
 TcpServer.o:
@@ -198,12 +273,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... self-muduo"
+	@echo "... Channel.o"
+	@echo "... Channel.i"
+	@echo "... Channel.s"
+	@echo "... DefaultPoller.o"
+	@echo "... DefaultPoller.i"
+	@echo "... DefaultPoller.s"
+	@echo "... EPollPoller.o"
+	@echo "... EPollPoller.i"
+	@echo "... EPollPoller.s"
+	@echo "... EventLoop.o"
+	@echo "... EventLoop.i"
+	@echo "... EventLoop.s"
 	@echo "... InetAddress.o"
 	@echo "... InetAddress.i"
 	@echo "... InetAddress.s"
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"
+	@echo "... Poller.o"
+	@echo "... Poller.i"
+	@echo "... Poller.s"
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"

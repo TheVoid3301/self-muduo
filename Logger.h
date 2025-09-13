@@ -28,6 +28,7 @@
         char buf[1024] = {0}; \
         snprintf(buf, sizeof(buf), LogmsgFormat, ##__VA_ARGS__); \
         Logger::getInstance().log(buf); \
+        exit(-1); \
     } while(0);
 
 #ifdef DEBUGOPEN
