@@ -1,6 +1,7 @@
-CMakeFiles/self-muduo.dir/Timestamp.o: /home/con/self-muduo/Timestamp.cc \
- /usr/include/stdc-predef.h /home/con/self-muduo/Timestamp.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/self-muduo.dir/Timestamp.o: \
+ /home/thevoid/self-muduo/Timestamp.cc /usr/include/stdc-predef.h \
+ /home/thevoid/self-muduo/Timestamp.h /usr/include/c++/13/iostream \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

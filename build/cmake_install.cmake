@@ -1,4 +1,4 @@
-# Install script for directory: /home/con/self-muduo
+# Install script for directory: /home/thevoid/self-muduo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/con/self-muduo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/thevoid/self-muduo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

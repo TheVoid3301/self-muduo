@@ -1,7 +1,10 @@
 #include "EPollPoller.h"
 #include "Logger.h"
 #include "Channel.h"
+#include "Timestamp.h"
 
+#include <cerrno>
+#include <strings.h>
 #include <sys/epoll.h>
 #include <unistd.h>
 #include <string.h>
@@ -28,7 +31,34 @@ EPollPoller::~EPollPoller()
 
 Timestamp EPollPoller::poll(int timeoutMs, ChannelList* activeChannels)
 {
+    LOG_DEBUG("func = %s => fd total count: %lu \n", __FUNCTION__, channels_.size());
 
+    int numEvents = ::epoll_wait(epollfd_, &*events_.begin(), static_cast<int>(events_.size()), timeoutMs);
+    int saveErrno = errno;
+    Timestamp now(Timestamp::now());
+
+    if (numEvents > 0)
+    {
+        LOG_DEBUG("%d events happened \n", numEvents);
+        fillAvtiveChannels(numEvents, activeChannels);
+        if (numEvents == events_.size())
+        {
+            events_.resize(events_.size() * 2);
+        }
+    }
+    else if (numEvents == 0)
+    {
+        LOG_DEBUG("%s timeout! \n", __FUNCTION__);
+    }
+    else
+    {
+        if (saveErrno != EINTR)
+        {
+            errno = saveErrno;
+            LOG_ERROR("EPollPoller::poll() error!");
+        }
+    }
+    return now;
 }
 
 /**
@@ -39,7 +69,7 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList* activeChannels)
 void EPollPoller::updateChannel(Channel* channel)
 {
     const int index = channel->index();
-    LOG_INFO("fd = %d event = %d index = %d \n", channel->fd(), channel->events(), index);
+    LOG_INFO("func = %s => fd = %d event = %d index = %d \n", __FUNCTION__, channel->fd(), channel->events(), index);
 
     if (index == kNew || index == kDeleted)
     {
@@ -75,6 +105,8 @@ void EPollPoller::removeChannel(Channel *channel)
     int fd = channel->fd();
     channels_.erase(fd);
 
+    LOG_INFO("func = %s => fd = %d \n", __FUNCTION__, fd);
+
     int index = channel->index();
     if (index == kAdded)
     {
@@ -85,13 +117,21 @@ void EPollPoller::removeChannel(Channel *channel)
 
 void EPollPoller::fillAvtiveChannels(int numEvents, ChannelList* activeChannels) const
 {
-
+    for (int i = 0; i < numEvents; ++i)
+    {
+        /**
+            在update函数中已经将fd对应的channel绑定到data.ptr
+        */
+        Channel* channel = static_cast<Channel*>(events_[i].data.ptr);
+        channel->set_revent(events_[i].events);
+        activeChannels->push_back(channel);
+    }
 }
 
 void EPollPoller::update(int operation, Channel* channel)
 {
     epoll_event event;
-    memset(&event, 0, sizeof event);
+    bzero(&event, sizeof event);
     int fd = channel->fd();
     event.events = channel->events();
     event.data.fd = fd;

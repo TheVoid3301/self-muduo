@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/con/self-muduo
+CMAKE_SOURCE_DIR = /home/thevoid/self-muduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/con/self-muduo/build
+CMAKE_BINARY_DIR = /home/thevoid/self-muduo/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/self-muduo.dir/clean
 CMakeFiles/self-muduo.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/self-muduo.dir/build.make CMakeFiles/self-muduo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/con/self-muduo/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target self-muduo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/thevoid/self-muduo/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target self-muduo"
 .PHONY : CMakeFiles/self-muduo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/self-muduo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/con/self-muduo/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thevoid/self-muduo/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/self-muduo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/con/self-muduo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thevoid/self-muduo/build/CMakeFiles 0
 .PHONY : CMakeFiles/self-muduo.dir/rule
 
 # Convenience name for target.
