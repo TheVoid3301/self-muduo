@@ -26,7 +26,7 @@ public:
 
     //开启事件循环
     void loop();
-    //推出事件循环
+    //退出事件循环
     void quit();
 
     Timestamp pollReturnTime() const { return pollReturnTime_; }
@@ -62,8 +62,7 @@ private:
     int wakeupFd_;  //当mainloop获取一个新用户的channel, 通过轮询选择一个subloop, 通过该成员通知唤醒subloop处理
     std::unique_ptr<Channel> wakeupChannel_;
 
-    ChannelList avtiveChannels_;
-    Channel* currentActiveChannel_;
+    ChannelList activeChannels_;
 
     std::atomic_bool callingPendingFunctors_;   //表示当前loop是否有需要执行的回调操作
     std::vector<Functor> pendingFunctors_;  //存储loop需要执行的所有回调操作
