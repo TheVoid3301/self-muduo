@@ -9,13 +9,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/thevoid/self-muduo/Channel.cc" "CMakeFiles/self-muduo.dir/Channel.o" "gcc" "CMakeFiles/self-muduo.dir/Channel.o.d"
+  "/home/thevoid/self-muduo/CurrentThread.cc" "CMakeFiles/self-muduo.dir/CurrentThread.o" "gcc" "CMakeFiles/self-muduo.dir/CurrentThread.o.d"
   "/home/thevoid/self-muduo/DefaultPoller.cc" "CMakeFiles/self-muduo.dir/DefaultPoller.o" "gcc" "CMakeFiles/self-muduo.dir/DefaultPoller.o.d"
   "/home/thevoid/self-muduo/EPollPoller.cc" "CMakeFiles/self-muduo.dir/EPollPoller.o" "gcc" "CMakeFiles/self-muduo.dir/EPollPoller.o.d"
   "/home/thevoid/self-muduo/EventLoop.cc" "CMakeFiles/self-muduo.dir/EventLoop.o" "gcc" "CMakeFiles/self-muduo.dir/EventLoop.o.d"
+  "/home/thevoid/self-muduo/EventLoopThread.cc" "CMakeFiles/self-muduo.dir/EventLoopThread.o" "gcc" "CMakeFiles/self-muduo.dir/EventLoopThread.o.d"
   "/home/thevoid/self-muduo/InetAddress.cc" "CMakeFiles/self-muduo.dir/InetAddress.o" "gcc" "CMakeFiles/self-muduo.dir/InetAddress.o.d"
   "/home/thevoid/self-muduo/Logger.cc" "CMakeFiles/self-muduo.dir/Logger.o" "gcc" "CMakeFiles/self-muduo.dir/Logger.o.d"
   "/home/thevoid/self-muduo/Poller.cc" "CMakeFiles/self-muduo.dir/Poller.o" "gcc" "CMakeFiles/self-muduo.dir/Poller.o.d"
   "/home/thevoid/self-muduo/TcpServer.cc" "CMakeFiles/self-muduo.dir/TcpServer.o" "gcc" "CMakeFiles/self-muduo.dir/TcpServer.o.d"
+  "/home/thevoid/self-muduo/Thread.cc" "CMakeFiles/self-muduo.dir/Thread.o" "gcc" "CMakeFiles/self-muduo.dir/Thread.o.d"
   "/home/thevoid/self-muduo/Timestamp.cc" "CMakeFiles/self-muduo.dir/Timestamp.o" "gcc" "CMakeFiles/self-muduo.dir/Timestamp.o.d"
   )
 
